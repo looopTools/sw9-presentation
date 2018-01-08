@@ -1,0 +1,37 @@
+\documentclass{beamer}
+
+\usetheme{metropolis}
+
+\usepackage[utf8]{inputenc}					% Input-indkodning af tegnsaet (UTF8)
+\usepackage[T1]{fontenc}					% Output-indkodning af tegnsaet (T1)
+\usepackage[danish, english]{babel}					% Dokumentets sprog
+
+%\usepackage[table,tikz]{xcolor}					% Definer farver med \definecolor. Se mere: http://en.wikibooks.org/wiki/LaTeX/Colors
+\usepackage{tikz-er2}
+\usepackage{tikz}                                               % For drawing
+\usepackage{tikz-qtree}
+\usepackage{graphicx} 						% Haandtering af eksterne billeder (JPG, PNG, EPS, PDF)
+\usepackage[style=british]{csquotes}
+
+\usepackage{amsmath}
+
+\def\signed #1{{\leavevmode\unskip\nobreak\hfil\penalty50\hskip1em
+  \hbox{}\nobreak\hfill #1%
+  \parfillskip=0pt \finalhyphendemerits=0 \endgraf}}
+
+\newsavebox\mybox
+\newenvironment{aquote}[1]
+  {\savebox\mybox{#1}\begin{quote}\openautoquote\hspace*{-.7ex}}
+  {\unskip\closeautoquote\vspace*{1mm}\signed{\usebox\mybox}\end{quote}}
+
+\title{Performance Study of Random Linear Network Coding Codes}
+\author{Lars Nielsen - deis914e17}
+\institute{Department Of Computer Science (Cassiopeia) \\ Aalborg University}
+\begin{document}
+\maketitle
+\input{disclaimer}
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
